@@ -1,13 +1,32 @@
 html{
 	padding: 0;
 	margin: 0;
-	font-family: Roboto, sans-serif;	
+	font-family: 12px/1.5 Tahoma,Helvetica,Arial,SimSun,sans-serif;	
 	box-sizing: border-box;
 }
 
 body{
 	margin: 0;
-	background-color: #fff;	
+	padding: 0;
+	background-color: rgb(239, 239, 239)
+}
+
+div#sidebar{
+	position: fixed;
+	background-color: #E2F8CE;
+	left: 2%;
+	top: 3%;
+	height: 7em;
+	width: 7em;
+}
+
+#sidebar button{
+	display: block;
+	margin: 12px;
+	height: 35px;
+	width: 60px;
+	text-align: center;
+	border-radius: 0.5;
 }
 
 .searchArea input{
@@ -34,11 +53,11 @@ i.fa-search{
 }
 
 div#main{
-	margin-top: 100px;
-	padding-bottom: 20px;
 	background-color: #FFFBEB;
+	padding-top: 12px;
+	padding-bottom: 20px;
 	background-attachment: relative;
-	width: 60%;
+	width: 50%;
 	margin: 0 auto;
 }
 
@@ -76,20 +95,21 @@ label{
 }
 
 section#post{
-	margin: 32px auto;
+	margin: 0 auto;
+	padding: 0;
 	width: 80%;
 	height: 100%;
 	/*border: 1px solid blue;*/
 }
 
 #post .item{
-	border-top: 0.5px solid slategray;
+	border-bottom: 0.5px solid slategray;
 	width: 100%;
 	padding: 0;
 	margin: 0;
 }
 
-#post .content{
+#post pre.content{
 	white-space: normal;
 	box-sizing: border-box;
 	/*overflow: hidden;*/
@@ -116,6 +136,7 @@ li .repost{
 }
 
 .fa-arrow-up{
+
 	position: fixed;
 	right: 6%;
 	bottom: 6%;

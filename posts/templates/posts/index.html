@@ -7,6 +7,10 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+	<div id="sidebar">
+		<a href="{% url 'login' %}"><button>Login</button></a>
+		<a href="{% url 'logout' %}"><button>Logout</button></a>
+	</div>
 	
 	<div class="searchArea">
 		<i class="fa fa-search"></i>
@@ -16,12 +20,16 @@
 
 	<div id="main">
 
-		<form id="textarea" action="{% url 'index' %}" method="post">
-		 	{% csrf_token %}
-		 	{{ post_form.as_p }}
-			<!--textarea id="input" name="input" required></textarea-->
-			<input type="submit" value="Submit" id="postBtn">
-		</form>
+		{% block content %}
+		{% if user.is_authenticated %}
+		  <form id="textarea" action="{% url 'index' %}" method="post">
+		   	{% csrf_token %}
+		   	{{ post_form.as_p }}
+		  	<!--textarea id="input" name="input" required></textarea-->
+		  	<input type="submit" value="Submit" id="postBtn">
+		  </form>
+		{% endif %}
+		{% endblock %}
 		
 		
 		<section id="post">
