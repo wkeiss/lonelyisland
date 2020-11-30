@@ -126,7 +126,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 # The URL to use when referring to static files (where they will be served from)
-STATIC_URL = '/static/'
+STATIC_URL = '/posts/static/'
 
 # Heroku: Update database configuration from $DATABASE_URL.
 import dj_database_url
