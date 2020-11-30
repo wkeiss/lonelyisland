@@ -33,10 +33,10 @@
 		
 		
 		<section id="post">
-			{% for posts_post in posts %}
+			{% for post in posts %}
 				<div class="item">
-					<pre class="content">{{posts_post.body}}</pre>
-					<pre class="date">{{posts_post.pub_date}}</pre>
+					<pre class="content">{{post.body}}</pre>
+					<pre class="date">{{post.pub_date}}</pre>
 				</div>
 			{% endfor %}
 		</section>
