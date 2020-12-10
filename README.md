@@ -1,6 +1,6 @@
 ## Overview
 
-![Demo Gif](lonelyisland.gif)
+![Demo Gif](demo.gif)
 
 This is a project names Lonely Island built by [Django](https://www.djangoproject.com/).
 
